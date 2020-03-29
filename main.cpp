@@ -83,21 +83,7 @@ void variableDeclarations()
 
     ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
 
-    ignoreUnused(isAwake);
-    ignoreUnused(wearsGloves);
-    ignoreUnused(worksFromHome);
-    ignoreUnused(dollarSign);
-    ignoreUnused(capA);
-    ignoreUnused(numberTwo);
-    ignoreUnused(numApples);
-    ignoreUnused(numCars);
-    ignoreUnused(numKids);
-    ignoreUnused(pi);
-    ignoreUnused(temperature);
-    ignoreUnused(marathonDistanceMiles);
-    ignoreUnused(bigPi);
-    ignoreUnused(voltageV);
-    ignoreUnused(pressureT);
+    ignoreUnused(isAwake, wearsGloves, worksFromHome, dollarSign, capA, numberTwo, numApples, numCars, numKids, pi, temperature, marathonDistanceMiles, bigPi, voltageV, pressureT);
 }
 /*
  10 functions
