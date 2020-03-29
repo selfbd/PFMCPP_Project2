@@ -16,16 +16,15 @@ video: Chapter 2 - Part 3
  
  1) Write down the names of all of the primitives available in C++ (excluding wchar_t)
  put them here: 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
+
+ (reference: https://www.tutorialspoint.com/cplusplus/cpp_data_types.htm)
+bool
+char
+int
+float
+double
+void
+wchar_t
  
 2) for each primitive type, write out 3 variable declarations inside the variableDeclaration function.
     give each declaration an initial value
@@ -66,9 +65,39 @@ void variableDeclarations()
     //example:
     int number = 2; //declaration of a primitive named 'number' with an initial value of '2'
     
-    
-    
+    bool isAwake = true;
+    bool wearsGloves = true;
+    bool worksFromHome = true;
+    char dollarSign = '$';
+    char capA = 'A';
+    char numberTwo = '2';
+    int numApples = 3;
+    int numCars = 2;
+    int numKids = 2;
+    float pi = 3.14f;
+    float temperature = 98.6f;
+    float marathonDistanceMiles = 26.22f;
+    double bigPi = 3.14159265359;
+    double voltageV = 3.234567;
+    double pressureT = 760.123456789; 
+
     ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+
+    ignoreUnused(isAwake);
+    ignoreUnused(wearsGloves);
+    ignoreUnused(worksFromHome);
+    ignoreUnused(dollarSign);
+    ignoreUnused(capA);
+    ignoreUnused(numberTwo);
+    ignoreUnused(numApples);
+    ignoreUnused(numCars);
+    ignoreUnused(numKids);
+    ignoreUnused(pi);
+    ignoreUnused(temperature);
+    ignoreUnused(marathonDistanceMiles);
+    ignoreUnused(bigPi);
+    ignoreUnused(voltageV);
+    ignoreUnused(pressureT);
 }
 /*
  10 functions
@@ -83,42 +112,87 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 /*
  1)
  */
+void doAssignment(unsigned int projectNumber, bool requiresCodeReview = true)
+{
+    ignoreUnused(projectNumber, requiresCodeReview);
+}
 
 /*
  2)
  */
-
+void coolRoom(int coolingDevice = 0)
+{
+    ignoreUnused(coolingDevice);
+}
 /*
  3)
  */
+float getRoomTemperature(bool useFahrenheitUnits = true)
+{
+    ignoreUnused(useFahrenheitUnits);
+    return {};
+}
 
 /*
  4)
  */
+bool isRoomCool()
+{
+    return {};
+}
 
 /*
  5)
  */
+float converFahrenheitToCelsius(float tempF)
+{
+    ignoreUnused(tempF);
+    return {};
+}
 
 /*
  6)
  */
-
+float calculateAverage(int score1, int score2, int score3, int score4, int score5)
+{
+    ignoreUnused(score1, score2, score3, score4, score5);
+    return {};
+}
 /*
  7)
  */
+float getSoundPressureLevelDb(char weighting = 'A', bool responseSpeedFast = true)
+{
+    ignoreUnused(weighting, responseSpeedFast);
+    return {};
+}
 
 /*
  8)
  */
+double getRelativeHumidity(double dryBulbTemp, double wetBulbTemp)
+{
+    ignoreUnused(dryBulbTemp, wetBulbTemp);
+    return {};
+}
 
 /*
  9)
  */
+char getLetterGrade(int studentId, bool assistIfNeeded = false)
+{
+    ignoreUnused(studentId, assistIfNeeded);
+    return {};  
+}
 
 /*
  10)
  */
+ void chill(int chillTimeMinutes)
+ {
+    ignoreUnused(chillTimeMinutes);
+    return;
+ }
 
 int main()
 {
@@ -126,27 +200,44 @@ int main()
     auto carRented = rentACar(6, 2); 
     
     //1)
-    
+    doAssignment(2);  
+
     //2)
-    
+    coolRoom();   
+
     //3)
-    
+    auto roomTempC = getRoomTemperature(false);
+
     //4)
-    
+    auto roomIsCool = isRoomCool();
+
     //5)
-    
+    auto tempC = converFahrenheitToCelsius(212.87f);
+
     //6)
-    
+    auto averageScore = calculateAverage(98, 92, 0, 100, 89);
+
     //7)
-    
+    auto splDbAFast = getSoundPressureLevelDb();
+
     //8)
-    
+    auto rh = getRelativeHumidity(99, 90);
+
     //9)
-    
+    auto letterGrade = getLetterGrade(1101, true);
+
     //10)
-    
+    chill(1440);
     
     ignoreUnused(carRented);
+    ignoreUnused(roomTempC);
+    ignoreUnused(roomIsCool);
+    ignoreUnused(tempC);
+    ignoreUnused(averageScore);
+    ignoreUnused(splDbAFast);
+    ignoreUnused(rh);
+    ignoreUnused(letterGrade);
+
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
