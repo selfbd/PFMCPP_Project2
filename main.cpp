@@ -216,6 +216,7 @@ int main()
     chill(1440);
     
     ignoreUnused(carRented);
+
     ignoreUnused(roomTempC);
     ignoreUnused(roomIsCool);
     ignoreUnused(tempC);
@@ -223,6 +224,8 @@ int main()
     ignoreUnused(splDbAFast);
     ignoreUnused(rh);
     ignoreUnused(letterGrade);
+
+    ignoreUnused(roomTempC, roomIsCool, tempC, averageScore, splDbAFast, rh, letterGrade);
 
     std::cout << "good to go!" << std::endl;
     return 0;    
